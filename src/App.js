@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import AllEvents from "./components/AllEvents/AllEvents";
 import SelectedEvents from "./components/SelectedEvents/SelectedEvents";
 import { useDispatch } from "react-redux";
@@ -13,11 +13,13 @@ function App() {
     dispatch(getData());
   }, [dispatch]);
   return (
+    <Suspense fallback="Loading..">
     <div className="App">
-      <AllEvents className="section" />
-      <SelectedEvents className="section" />
+      <AllEvents className="section" gridStyle="events-grid"/>
+      <SelectedEvents className="section" gridStyle="events-grid"/>
       <ToastContainer position="top-center" theme="colored" />
     </div>
+    </Suspense>
   );
 }
 

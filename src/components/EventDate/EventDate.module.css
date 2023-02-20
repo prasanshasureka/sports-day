@@ -1,0 +1,34 @@
+.event-date_time {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 5.5rem;
+  border: 1px solid black;
+  color: black;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.event-date {
+  border: 1px solid black;
+}
+
+.event-date__month {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.event-date__year {
+  font-size: 0.75rem;
+}
+
+.event-date__day {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.event-time {
+  font-size: 1rem;
+  font-weight: bold;
+}
