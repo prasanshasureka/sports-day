@@ -8,6 +8,7 @@ const SelectedEvents = (props) => {
   const { selectedEvents } = useSelector((state) => state.master);
   const unselectEventHandler = (sportsEvent) => {
     dispatch(unselectEvent(sportsEvent));
+    console.log(selectedEvents)
   };
   return (
     <div className={props.className}>
@@ -15,11 +16,16 @@ const SelectedEvents = (props) => {
       {selectedEvents.map((sportsEvent) => (
         <div key={sportsEvent.id}>
           <Card>
-            {sportsEvent.event_name}
-            {sportsEvent.event_category}
-            {sportsEvent.start_time}
-            {sportsEvent.end_time}
-            <button title="SELECT" onClick={() => unselectEventHandler(sportsEvent)}>REMOVE</button>
+            <div>{sportsEvent.event_name}</div>
+            <div>{sportsEvent.event_category}</div>
+            <div>{sportsEvent.start_time}</div>
+            <div>{sportsEvent.end_time}</div>
+            <button
+              title="SELECT"
+              onClick={() => unselectEventHandler(sportsEvent)}
+            >
+              REMOVE
+            </button>
           </Card>
         </div>
       ))}

@@ -4,6 +4,7 @@ import AllEvents from "./components/AllEvents/AllEvents";
 import SelectedEvents from "./components/SelectedEvents/SelectedEvents";
 import { useDispatch } from "react-redux";
 import { getData } from "./store/master/action.creator";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
       <AllEvents className="section" />
       <SelectedEvents className="section" />
+      <ToastContainer position="top-center" theme="colored" />
     </div>
   );
 }
