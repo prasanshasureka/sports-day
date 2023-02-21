@@ -26,7 +26,8 @@ const AllEvents = (props) => {
   };
   return (
     <div className={props.className}>
-      <h1>All Events</h1>
+      <div className={style['header-div']}><h1>All Events</h1></div>
+      
       <div className={props.gridStyle}>
         {allEvents.map((sportsEvent) => (
           <SportsCard
@@ -35,6 +36,7 @@ const AllEvents = (props) => {
             cardStyle={style.card}
             dateTimeStyle={style.date_time}
             buttonTitle="Select"
+            buttonClass={style.button}
             clickHandler={selectEventHandler}
           />
         ))}

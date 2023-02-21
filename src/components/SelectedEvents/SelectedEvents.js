@@ -13,7 +13,7 @@ const SelectedEvents = (props) => {
   };
   return (
     <div className={props.className}>
-      <h1>Selected Events</h1>
+      <div className={style['header-div']}><h1>Selected Events</h1></div>
       <div className={props.gridStyle}>
         {selectedEvents.map((sportsEvent) => (
           <SportsCard
@@ -22,6 +22,7 @@ const SelectedEvents = (props) => {
             cardStyle={style.card}
             dateTimeStyle={style.date_time}
             buttonTitle="Remove"
+            buttonClass={style.button}
             clickHandler={unselectEventHandler}
           />
         ))}

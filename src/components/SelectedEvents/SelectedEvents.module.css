@@ -1,8 +1,31 @@
 .card {
-  background-color: #c5e1a5;
+  /* background-color: #c5e1a5; */
+  background-image: linear-gradient(to bottom right, #ffcdd2 , #e57373);
   height: 80%;
 }
 
 .date_time {
-  background-color: #aed581;
+  /* background-color: #aed581; */
+  background-color: white
 }
+
+.header-div {
+  height: 10%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #424242;
+  color: white;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.button {
+  background-color: rgb(209, 59, 51);
+  color: white;
+}
+
+
+

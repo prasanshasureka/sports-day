@@ -21,7 +21,7 @@ const SportsCard = (props) => {
         endTime={sportsEvent.end_time}
         className={dateTimeStyle}
       />
-      <Button onClick={() => props.clickHandler(sportsEvent)} title={props.buttonTitle}/>
+      <Button onClick={() => props.clickHandler(sportsEvent)} title={props.buttonTitle} className={props.buttonClass}/>
     </Card>
   );
 };

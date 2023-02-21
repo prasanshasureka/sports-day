@@ -2,11 +2,11 @@ import React from "react";
 import style from "./Button.module.css";
 
 function Button(props) {
-  const classProp = props.className;
+  const buttonStyle = props.className ? `${props.className} ${style.button}` : style.button
   return (
     <button
       onClick={props.onClick}
-      className={`${style.button} ${classProp}`}
+      className={buttonStyle}
       type={props.type}
       form={props.form}
     >
