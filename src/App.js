@@ -1,11 +1,14 @@
 import "./App.css";
-import { useEffect, Suspense } from "react";
-import AllEvents from "./components/AllEvents/AllEvents";
-import SelectedEvents from "./components/SelectedEvents/SelectedEvents";
+import React, { useEffect, Suspense } from "react";
+// import AllEvents from "./components/AllEvents/AllEvents";
+// import SelectedEvents from "./components/SelectedEvents/SelectedEvents";
 import { useDispatch, useSelector } from "react-redux";
 import { getData } from "./store/master/action.creator";
 import { ToastContainer } from "react-toastify";
 import Spinner from "./components/Spinner/Spinner";
+
+const AllEvents = React.lazy(() => import('./components/AllEvents/AllEvents'))
+const SelectedEvents = React.lazy(() => import('./components/SelectedEvents/SelectedEvents'))
 
 function App() {
   const dispatch = useDispatch();
@@ -14,13 +17,12 @@ function App() {
     dispatch(getData());
   }, [dispatch]);
   return (
-    <Suspense fallback="Loading..">
-    <div className="App">
-      <AllEvents className="section" gridStyle="events-grid"/>
-      <SelectedEvents className="section" gridStyle="events-grid"/>
-      <Spinner show={isLoading} />
-      <ToastContainer position="top-center" theme="colored" />
-    </div>
+    <Suspense fallback={<Spinner show={isLoading} />}>
+      <div className="App">
+        <AllEvents className="section" gridStyle="events-grid" />
+        <SelectedEvents className="section" gridStyle="events-grid" />
+        <ToastContainer position="top-center" theme="colored" />
+      </div>
     </Suspense>
   );
 }

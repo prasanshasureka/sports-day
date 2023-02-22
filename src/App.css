@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   display: flex;
+  overflow: auto
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -21,6 +22,7 @@
 .section {
   height: 100vh;
   width: 50vw;
+  /* overflow: auto; */
 }
 
 .events-grid {
@@ -29,4 +31,5 @@
   justify-content: center;
   align-items: center;
   grid-auto-rows: 45vh;
+  margin-top: 10%;
 }

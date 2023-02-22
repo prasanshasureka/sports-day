@@ -4,12 +4,12 @@
     justify-content: center;
     position: fixed;
     inset: 0;
-    background-color: var(--color-shadow);
+    background-color: white;
     z-index: 9999;
   }
   
   .spinContent {
-    background-color: var(--color-card);
+    background-color: #b2ebf2;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 1px 6px var(--color-shadow);
@@ -31,8 +31,8 @@
     height: 34px;
     margin: 8px;
     border-radius: 50%;
-    border: 6px solid var(--color-primary);
-    border-color: var(--color-primary) transparent var(--color-primary)
+    border: 6px solid white;
+    border-color: #f06292 transparent #64b5f6
       transparent;
     animation: spinner 1.2s linear infinite;
   }

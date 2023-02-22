@@ -27,7 +27,6 @@ const AllEvents = (props) => {
   return (
     <div className={props.className}>
       <div className={style['header-div']}><h1>All Events</h1></div>
-      
       <div className={props.gridStyle}>
         {allEvents.map((sportsEvent) => (
           <SportsCard

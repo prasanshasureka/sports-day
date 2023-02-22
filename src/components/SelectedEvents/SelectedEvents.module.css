@@ -1,12 +1,12 @@
 .card {
   /* background-color: #c5e1a5; */
-  background-image: linear-gradient(to bottom right, #ffcdd2 , #e57373);
+  background-image: linear-gradient(to bottom right, #ffcdd2, #e57373);
   height: 80%;
 }
 
 .date_time {
   /* background-color: #aed581; */
-  background-color: white
+  background-color: white;
 }
 
 .header-div {
@@ -16,6 +16,8 @@
   justify-content: center;
   background-color: #424242;
   color: white;
+  width: 50%;
+  position: fixed;
 }
 
 h1 {
@@ -26,6 +28,3 @@ h1 {
   background-color: rgb(209, 59, 51);
   color: white;
 }
-
-
-
