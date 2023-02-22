@@ -35,7 +35,7 @@ const AllEvents = (props) => {
             cardStyle={style.card}
             dateTimeStyle={style.date_time}
             buttonTitle="Select"
-            buttonClass={style.button}
+            buttonClass={style['select-button']}
             clickHandler={selectEventHandler}
           />
         ))}

@@ -22,7 +22,7 @@ const SelectedEvents = (props) => {
             cardStyle={style.card}
             dateTimeStyle={style.date_time}
             buttonTitle="Remove"
-            buttonClass={style.button}
+            buttonClass={style['remove-button']}
             clickHandler={unselectEventHandler}
           />
         ))}

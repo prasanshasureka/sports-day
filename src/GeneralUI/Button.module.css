@@ -9,3 +9,15 @@
   width: 10rem;
   height: 2rem;
 }
+
+@media (max-width: 380px) {
+  .button {
+    border-radius: 15px;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid black;
+    width: 10rem;
+    height: 1.7rem;
+  }
+}

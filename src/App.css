@@ -1,7 +1,12 @@
 .App {
   text-align: center;
   display: flex;
-  overflow: auto
+  overflow: auto;
+  
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -33,3 +38,37 @@
   grid-auto-rows: 45vh;
   margin-top: 10%;
 }
+
+@media only screen and (max-width: 750px) {
+  .events-grid {
+    margin: 2vw;
+    margin-top: 7vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    grid-auto-rows: 35vh;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .section {
+    height: 100vh;
+    width: 50vw;
+    
+    /* overflow: auto; */
+  }
+
+  .events-grid {
+    margin: 2vw;
+    margin-top: 7vh;
+    display: grid;
+    /* grid-template-columns: repeat(1, 1fr); */
+    justify-content: center;
+    align-items: center;
+    grid-auto-rows: 30vh;
+    grid-auto-columns: 40vw;
+  }
+}
+
+
