@@ -6,6 +6,7 @@ import { ToastContainer } from "react-toastify";
 import Spinner from "./components/Spinner/Spinner";
 import AllEvents from "./components/AllEvents/AllEvents";
 import SelectedEvents from "./components/SelectedEvents/SelectedEvents";
+import Error from "./components/Error/Error";
 
 function App() {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ function App() {
   }, [dispatch]);
 
   if (isLoading) return <Spinner show={isLoading} />;
-  if (error) return <h1>Oops.. There was some error:  {error}</h1>
+  if (error) return <Error/>
   return (
     <div className="App">
       <AllEvents className="section" gridStyle="events-grid" />
