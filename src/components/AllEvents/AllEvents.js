@@ -22,7 +22,7 @@ const AllEvents = (props) => {
     }
     checkEventSelectable(sportsEvent, selectedEvents)
       ? dispatch(selectEvent(sportsEvent))
-      : notify(`Can't select 2 events at the same time`);
+      : notify(`Can't select 2 events scheduled at the same time`);
   };
   return (
     <div className={props.className}>

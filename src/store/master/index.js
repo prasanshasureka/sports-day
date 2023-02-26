@@ -31,7 +31,7 @@ const masterSlice = createSlice({
     });
     builder.addCase(getData.rejected, (state, action) => {
       state.isLoading = false;
-      state.error = action.payload;
+      state.error = action.error.message;
     });
   },
 });

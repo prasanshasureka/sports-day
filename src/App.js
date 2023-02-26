@@ -9,12 +9,13 @@ import SelectedEvents from "./components/SelectedEvents/SelectedEvents";
 
 function App() {
   const dispatch = useDispatch();
-  const { isLoading } = useSelector((state) => state.master);
+  const { isLoading, error } = useSelector((state) => state.master);
   useEffect(() => {
     dispatch(getData());
   }, [dispatch]);
 
   if (isLoading) return <Spinner show={isLoading} />;
+  if (error) return <h1>Oops.. There was some error:  {error}</h1>
   return (
     <div className="App">
       <AllEvents className="section" gridStyle="events-grid" />
