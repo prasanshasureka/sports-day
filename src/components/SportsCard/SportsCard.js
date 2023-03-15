@@ -7,7 +7,6 @@ import style from "./SportsCard.module.css";
 const SportsCard = (props) => {
   const sportsEvent = props.sportsEvent;
   const cardStyle = props.cardStyle;
-  const dateTimeStyle = props.dateTimeStyle;
   return (
     <Card className={cardStyle}>
       <div className={style["event__name_category"]}>
@@ -19,7 +18,6 @@ const SportsCard = (props) => {
       <EventDate
         startTime={sportsEvent.start_time}
         endTime={sportsEvent.end_time}
-        className={dateTimeStyle}
       />
       <Button
         onClick={() => props.clickHandler(sportsEvent)}

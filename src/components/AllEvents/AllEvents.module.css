@@ -1,11 +1,24 @@
+.section {
+  height: 100vh;
+  width: 75vw;
+  overflow: auto;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-auto-rows: 45vh;
+  margin-top: 10vh;
+}
+
 .card {
-  /* background-color: #ffffa8; */
   background-image: linear-gradient(to bottom right, #80d8ff, #40c4ff);
   height: 80%;
 }
 
 .date_time {
-  /* background-color: #fff176; */
   background-color: white;
 }
 
@@ -16,7 +29,7 @@
   justify-content: center;
   background-color: #424242;
   color: white;
-  width: 50%;
+  width: 75%;
   position: fixed;
 }
 
@@ -31,6 +44,55 @@ h1 {
 }
 
 @media only screen and (max-width: 750px) {
+  .section {
+    height: 100vh;
+    width: 67vw;
+  }
+
+  .header-div {
+    height: 7vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #424242;
+    color: white;
+    width: 67%;
+    position: fixed;
+  }
+
+  .events-grid {
+    margin: 1vw;
+    margin-top: 7vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    grid-auto-rows: 35vh;
+  }
+
+  h1 {
+    margin: 0px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .section {
+    height: 100vh;
+    width: 50vw;
+  }
+
+  .events-grid {
+    margin: 2vw;
+    margin-top: 7vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-auto-rows: 30vh;
+    grid-template-columns: repeat(1, 1fr);
+    /* grid-auto-columns: 40vw; */
+  }
+
   .header-div {
     height: 7vh;
     align-items: center;
@@ -40,10 +102,5 @@ h1 {
     color: white;
     width: 50%;
     position: fixed;
-  }
-
-  h1 {
-    margin: 0px;
-    font-size: 20px;
   }
 }

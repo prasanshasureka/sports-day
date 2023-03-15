@@ -19,8 +19,8 @@ function App() {
   if (error) return <Error/>
   return (
     <div className="App">
-      <AllEvents className="section" gridStyle="events-grid" />
-      <SelectedEvents className="section" gridStyle="events-grid" />
+      <AllEvents />
+      <SelectedEvents />
       <ToastContainer position="top-center" theme="colored" />
     </div>
   );

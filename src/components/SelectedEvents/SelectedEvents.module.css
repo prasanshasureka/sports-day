@@ -1,3 +1,18 @@
+.section {
+  height: 100vh;
+  width: 25vw;
+  overflow: auto;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-auto-rows: 45vh;
+  margin-top: 10vh;
+}
+
 .card {
   /* background-color: #c5e1a5; */
   background-image: linear-gradient(to bottom right, #ffcdd2, #e57373);
@@ -16,7 +31,7 @@
   justify-content: center;
   background-color: #424242;
   color: white;
-  width: 50%;
+  width: 25%;
   position: fixed;
 }
 
@@ -30,6 +45,54 @@ h1 {
 }
 
 @media only screen and (max-width: 750px) {
+  .section {
+    height: 100vh;
+    width: 33vw;
+  }
+
+  .events-grid {
+    margin: 1vw;
+    margin-top: 7vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    grid-auto-rows: 35vh;
+  }
+
+  .header-div {
+    height: 7vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #424242;
+    color: white;
+    width: 33%;
+    position: fixed;
+  }
+
+  h1 {
+    margin: 0px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .section {
+    height: 100vh;
+    width: 50vw;
+  }
+
+  .events-grid {
+    margin: 2vw;
+    margin-top: 7vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-auto-rows: 30vh;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .header-div {
     height: 7vh;
     align-items: center;
@@ -39,10 +102,5 @@ h1 {
     color: white;
     width: 50%;
     position: fixed;
-  }
-
-  h1 {
-    margin: 0px;
-    font-size: 20px;
   }
 }
